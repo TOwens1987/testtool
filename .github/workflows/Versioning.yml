@@ -1,6 +1,5 @@
 name: Create New Release
 
-default_bump: false
 on:
   push:
     tags:
@@ -13,6 +12,7 @@ on:
       - ".github/**"
       - ".git*"
 jobs:
+  default_bump: false
   release:
     runs-on: ubuntu-latest
     steps:
