@@ -1,5 +1,6 @@
 name: Create New Release
 
+default_bump: false
 on:
   push:
     tags:
