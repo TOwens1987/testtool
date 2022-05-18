@@ -1,17 +1,7 @@
 name: 'Commit Message Check'
 on:
+  workflow_call:
   pull_request:
-    types:
-      - opened
-      - edited
-      - reopened
-      - synchronize
-  pull_request_target:
-    types:
-      - opened
-      - edited
-      - reopened
-      - synchronize
   push:
     branches:
       - main
@@ -22,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check Commit Type
-        uses: gsactions/commit-message-checker@v1
-        with:
-          pattern: '\(\): .+$'
-          flags: 'gm'
-          error: 'Your commit message has to contain similar syntax "fix():" or "feat():".'
+          uses: gsactions/commit-message-checker@v1
+          with:
+            pattern: '(feat\(\):)|(fix\(\)):|(patch\(\)):'
+            flags: 'gm'
+            error: 'Your first line has to contain a commit type like "feat(): or fix():".'
