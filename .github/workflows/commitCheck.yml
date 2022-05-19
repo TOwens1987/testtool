@@ -14,6 +14,6 @@ jobs:
       - name: Check Commit Type
         uses: gsactions/commit-message-checker@v1
         with:
-          pattern: '(feat\(\):)|(fix\(\)):|(patch\(\)):'
+          pattern: '(feat\(\):)|(fix\(\)):|(patch\(\)):|(perf\(\)):'
           flags: 'gm'
           error: 'Your first line has to contain a commit type like "feat(): or fix():".'
