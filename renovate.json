@@ -9,14 +9,14 @@
   },
 
   "regexManagers": [
-  {
-    "fileMatch": ["terragrunt.hcl$"],
-    "matchStringsStrategy": "any",
-    "matchStrings": [
-      "revision = \"(?<currentValue>.*?\""
+    {
+      "description": "Update custom tag",
+      "fileMatch": [".hcl$"],
+      "matchStrings": [
+        "revision = \"(?<currentValue>.*?)\""
       ],
-      "depNameTemplate": "gruntwork-io/terragrunt",
-      "datasourceTemplate": "terragrunt"
+      "depNameTemplate": "TOwens1987/GitVersioning",
+      "datasourceTemplate": "github-releases"
     }
   ]
 }
