@@ -3,6 +3,7 @@
   "extends": [
     "config:base"
   ],
+  "enabledManagers": ["regex"],
 
   "regexManagers": [
     {
@@ -14,6 +15,7 @@
       "datasourceTemplate": "github-releases",
       "packageNameTemplate": "TOwens1987/GitVersioning",
       "depNameTemplate": "GitVersioning Update",
+      "extractVersionTemplate": "^(?<version>.*)$",
       "versioningTemplate": "semver"
     }
   ]
