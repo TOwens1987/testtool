@@ -4,19 +4,17 @@
     "config:base"
   ],
 
-  "terragrunt": {
-    "fileMatch": ["^terragrunt/.*\\.hcl$"]
-  },
-
   "regexManagers": [
     {
-      "description": "Update custom tag",
+      "description": "Update HCL Plugins",
       "fileMatch": [".hcl$"],
       "matchStrings": [
-        "revision = \"(?<currentValue>.*?)\" # (?<datasource>.*?)/(?<depName>.*?)\\s"
+        "revision =\\s\"(?<currentValue>.*\\d)"
       ],
-      "depNameTemplate": "TOwens1987/GitVersioning",
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-releases",
+      "packageNameTemplate": "TOwens1987/GitVersioning",
+      "depNameTemplate": "GitVersioning Update",
+      "versioningTemplate": "semver"
     }
   ]
 }
