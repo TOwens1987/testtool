@@ -31,7 +31,7 @@ def check_win():
     return False
 
 # Function to check if the board is full
-def check_full():
+# def check_full():
     if ' ' not in board:
         return True
     return False
