@@ -1,4 +1,4 @@
-# Tic Tac Toe
+## Tic Tac Toe
 
 # Initialize the board
 board = [' ' for i in range(9)]
