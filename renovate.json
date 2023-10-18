@@ -13,7 +13,6 @@
     },
     {
       "matchDatasources": ["github-tags"],
-      "matchPackageNames": ["tags"],
       "groupName": "tools-prime",
       "versioning": "regex:appVersion: (?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)"
     }
