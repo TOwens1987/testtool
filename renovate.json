@@ -6,12 +6,6 @@
   "enabledManagers": ["regex"],
   "packageRules": [
     {
-      "matchDatasources": ["github-releases"],
-      "matchPackageNames": ["releases"],
-      "groupName": "tools",
-      "versioning": "regex:appVersion: (?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)"
-    },
-    {
       "matchDatasources": ["github-tags"],
       "groupName": "tools-prime",
       "versioning": "regex:appVersion: (?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)"
